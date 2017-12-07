@@ -13,6 +13,7 @@
 	font-family: $font__sans;
 	color: #fff;
 	background-color: $color__skin;
+	
 	@media screen and (min-width: $query__small) {
 		padding: 1em 2em;
 	}
@@ -23,9 +24,9 @@
 	min-height: 65px;
 	min-width:35%;
 	display: flex;
-
-	
+	flex: 1 0 auto;
 }
+
 .custom-logo-link {
 	margin-right: 1em;
 
