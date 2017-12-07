@@ -22,11 +22,12 @@
 .site-branding {
 	min-height: 65px;
 	min-width:35%;
+	display: flex;
 
 	
 }
 .custom-logo-link {
-
+	margin-right: 1em;
 
 
 	img {
@@ -36,6 +37,15 @@
 	}
 
 	}
+
+	.site-branding_text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 65px;
+
+	}
+
 
 .site-title {
 	margin: 0;

@@ -32,12 +32,13 @@ if ( is_front_page() && the_header_image_tag () );
 
 	<header id="masthead" class="site-header">
 
-	
+
 		<div class="site-branding">
+			<!-- LOGO -->
 			<?php
 			the_custom_logo(); 
 			?>
-
+<div class="site-branding_text">
 
 			<?php
 			if ( is_front_page() && is_home() ) : ?>
@@ -52,8 +53,11 @@ if ( is_front_page() && the_header_image_tag () );
 			if ( $description || is_customize_preview() ) : ?>
 				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
 			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
+endif; ?>
+</div><!-- END .site-branding_text -->
+		</div><!-- END .site-branding -->
+
+
 
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'test' ); ?></button>
