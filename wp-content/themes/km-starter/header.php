@@ -31,10 +31,14 @@ if ( is_front_page() && the_header_image_tag () );
 </figure>  
 
 	<header id="masthead" class="site-header">
+
+	
 		<div class="site-branding">
 			<?php
 			the_custom_logo(); 
 			?>
+
+
 			<?php
 			if ( is_front_page() && is_home() ) : ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
