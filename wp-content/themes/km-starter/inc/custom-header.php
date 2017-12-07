@@ -20,8 +20,8 @@ function km_starter_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'km_starter_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => 'ffffff',
-		'width'                  => 800,
-		'height'                 => 200,
+		'width'                  => 2000,
+		'height'                 => 850,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'km_starter_header_style',
 	) ) );
