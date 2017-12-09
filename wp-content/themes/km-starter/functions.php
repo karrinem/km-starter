@@ -119,13 +119,15 @@ add_action( 'widgets_init', 'km_starter_widgets_init' );
 function km_starter_scripts() {
 	wp_enqueue_style( 'km-starter-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'km-starter-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
+	wp_enqueue_script( 'km-starter-navigation', get_template_directory_uri() . 
+	'/js/navigation.js', array('jquery'), '20151215', true );
 
 	wp_localize_script('km-starter-navigation' , 'km-starterScreenReaderText' , 
 	array(
-		'expand' => __('Expand child menu' , 'm-starter'),
-		'collapse' => __('Collapse child menu' , 'm-starter'),
+		'expand' => __( 'Expand child menu' , 'km-starter'),
+		'collapse' => __( 'Collapse child menu' , 'km-starter'),
 	));
+
 	wp_enqueue_script( 'km-starter-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
