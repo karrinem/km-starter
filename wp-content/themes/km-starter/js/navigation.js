@@ -1,4 +1,4 @@
-/* global km-starterScreenReaderText */
+/* global km_starterScreenReaderText */
 /**
  * Theme functions file.
  *
@@ -17,8 +17,6 @@
 
 		container.find( '.menu-item-has-children > a, .page_item_has_children > a' ).after( dropdownToggle );
 
-		
-
 		container.find( '.dropdown-toggle' ).click( function( e ) {
 			var _this = $( this ),
 				screenReaderSpan = _this.find( '.screen-reader-text' );
@@ -29,7 +27,8 @@
 
 			_this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
 
-			screenReaderSpan.text( screenReaderSpan.text() === km-starterScreenReaderText.expand ? km-starterScreenReaderText.collapse : km-starterScreenReaderText.expand );
+			screenReaderSpan.text( screenReaderSpan.text() === km_starterScreenReaderText.expand ?
+			 km_starterScreenReaderText.collapse : km_starterScreenReaderText.expand );
 		});
 	}
 
@@ -51,7 +50,7 @@
 		// Add an initial value for the attribute.
 		menuToggle.attr( 'aria-expanded', 'false' );
 
-		menuToggle.on( 'click.km-starter', function() {
+		menuToggle.on( 'click.km_starter', function() {
 			siteNavContain.toggleClass( 'toggled-on' );
 
 			$( this ).attr( 'aria-expanded', siteNavContain.hasClass( 'toggled-on' ) );
@@ -68,14 +67,14 @@
 		function toggleFocusClassTouchScreen() {
 			if ( 'none' === $( '.menu-toggle' ).css( 'display' ) ) {
 
-				$( document.body ).on( 'touchstart.km-starter', function( e ) {
+				$( document.body ).on( 'touchstart.km_starter', function( e ) {
 					if ( ! $( e.target ).closest( '.main-navigation li' ).length ) {
 						$( '.main-navigation li' ).removeClass( 'focus' );
 					}
 				});
 
 				siteNavigation.find( '.menu-item-has-children > a, .page_item_has_children > a' )
-					.on( 'touchstart.km-starter', function( e ) {
+					.on( 'touchstart.km_starter', function( e ) {
 						var el = $( this ).parent( 'li' );
 
 						if ( ! el.hasClass( 'focus' ) ) {
@@ -86,16 +85,16 @@
 					});
 
 			} else {
-				siteNavigation.find( '.menu-item-has-children > a, .page_item_has_children > a' ).unbind( 'touchstart.km-starter' );
+				siteNavigation.find( '.menu-item-has-children > a, .page_item_has_children > a' ).unbind( 'touchstart.km_starter' );
 			}
 		}
 
 		if ( 'ontouchstart' in window ) {
-			$( window ).on( 'resize.km-starter', toggleFocusClassTouchScreen );
+			$( window ).on( 'resize.km_starter', toggleFocusClassTouchScreen );
 			toggleFocusClassTouchScreen();
 		}
 
-		siteNavigation.find( 'a' ).on( 'focus.km-starter blur.km-starter', function() {
+		siteNavigation.find( 'a' ).on( 'focus.km_starter blur.km_starter', function() {
 			$( this ).parents( '.menu-item, .page_item' ).toggleClass( 'focus' );
 		});
 	})();
