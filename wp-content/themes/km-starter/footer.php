@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package km-starter
+ * @package km_starter
  */
 
 ?>
@@ -15,14 +15,14 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'km-starter' ) ); ?>"><?php
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'km_starter' ) ); ?>"><?php
 				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'km-starter' ), 'WordPress' );
+				printf( esc_html__( 'Proudly powered by %s', 'km_starter' ), 'WordPress' );
 			?></a>
 			<span class="sep"> | </span>
 			<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'km-starter' ), 'km-starter', '<a href="http://underscores.me/">Karrine Magnussen</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'km_starter' ), 'km_starter', '<a href="http://underscores.me/">Karrine Magnussen</a>' );
 			?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

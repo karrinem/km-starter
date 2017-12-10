@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package km-starter
+ * @package km_starter
  */
 
 get_header(); ?>

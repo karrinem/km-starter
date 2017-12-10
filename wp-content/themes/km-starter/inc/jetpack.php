@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package km-starter
+ * @package km_starter
  */
 
 /**
@@ -28,7 +28,7 @@ function km_starter_jetpack_setup() {
 	// Add theme support for Content Options.
 	add_theme_support( 'jetpack-content-options', array(
 		'post-details' => array(
-			'stylesheet' => 'km-starter-style',
+			'stylesheet' => 'km_starter-style',
 			'date'       => '.posted-on',
 			'categories' => '.cat-links',
 			'tags'       => '.tags-links',
